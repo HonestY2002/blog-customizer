@@ -22,6 +22,7 @@ interface ArticleParamsFormProps {
 	onChange?: (data: ArticleStateType) => void;
 }
 
+
 export const ArticleParamsForm = ({ onChange }: ArticleParamsFormProps) => {
 	const [sidebarOpen, setSidebarOpen] = useState(false);
 	const [selectedFont, setFont] = useState(
