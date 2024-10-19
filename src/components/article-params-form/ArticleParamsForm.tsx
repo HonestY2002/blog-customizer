@@ -17,6 +17,7 @@ import {
 } from 'src/constants/articleProps';
 import { useOutsideClickClose } from '../select/hooks/useOutsideClickClose';
 import { Separator } from '../separator';
+import { Spacer } from '../spacer';
 
 interface ArticleParamsFormProps {
 	onChange?: (data: ArticleStateType) => void;
@@ -109,6 +110,8 @@ export const ArticleParamsForm = ({ onChange }: ArticleParamsFormProps) => {
 						title='шрифт'
 					/>
 
+					<Spacer />
+
 					<RadioGroup
 						selected={selectedFontSize}
 						name='radio'
@@ -117,6 +120,8 @@ export const ArticleParamsForm = ({ onChange }: ArticleParamsFormProps) => {
 						title='размер шрифта'
 					/>
 
+					<Spacer />
+
 					<Select
 						selected={selectedFontColor}
 						onChange={setFontColor}
@@ -124,7 +129,11 @@ export const ArticleParamsForm = ({ onChange }: ArticleParamsFormProps) => {
 						title='цвет шрифта'
 					/>
 
+					<Spacer />
+
 					<Separator />
+
+					<Spacer />
 
 					<Select
 						selected={selectedBackgroundColor}
@@ -132,6 +141,8 @@ export const ArticleParamsForm = ({ onChange }: ArticleParamsFormProps) => {
 						options={backgroundColors}
 						title='цвет фона'
 					/>
+
+					<Spacer />
 
 					<Select
 						selected={selectedWidthContent}
