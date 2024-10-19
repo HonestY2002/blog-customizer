@@ -16,11 +16,11 @@ const domNode = document.getElementById('root') as HTMLDivElement;
 const root = createRoot(domNode);
 
 const App = () => {
-	const [appState, setAppState] = useState(defaultArticleState);
+	const [formStyleState, setArticleState] = useState(defaultArticleState);
 
 	const changeHandler = (newAppState: ArticleStateType) => {
 		console.log('changeee');
-		setAppState(newAppState);
+		setArticleState(newAppState);
 	};
 
 	return (
@@ -28,11 +28,11 @@ const App = () => {
 			className={clsx(styles.main)}
 			style={
 				{
-					'--font-family': appState.fontFamilyOption.value,
-					'--font-size': appState.fontSizeOption.value,
-					'--font-color': appState.fontColor.value,
-					'--container-width': appState.contentWidth.value,
-					'--bg-color': appState.backgroundColor.value,
+					'--font-family': formStyleState.fontFamilyOption.value,
+					'--font-size': formStyleState.fontSizeOption.value,
+					'--font-color': formStyleState.fontColor.value,
+					'--container-width': formStyleState.contentWidth.value,
+					'--bg-color': formStyleState.backgroundColor.value,
 				} as CSSProperties
 			}>
 			<ArticleParamsForm onChange={changeHandler} />
